@@ -6,12 +6,18 @@ class MailController < ApplicationController
 
   def create
     mail = current_user.mails.build(whitelist_params)
-    redirect_to root_path if mail.save
+    if mail.save
+      ActionCable.server.broadcast 'chatroom_channel', mail: mail_render(mail)
+    end
   end
 
-  private 
+  private
 
   def whitelist_params
     params.require(:mail).permit(:body)
+  end
+
+  def mail_render(mail)
+    render(partial: 'mails/mail', locals: { mail: mail })
   end
 end
