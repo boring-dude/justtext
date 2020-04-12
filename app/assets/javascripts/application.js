@@ -19,4 +19,5 @@
 
 $(document).on('turbolinks:load', function() {
     $('.ui.dropdown').dropdown();
+    $('.message').transition('bounce', '1500ms').transition('fade', '2500ms');
 })
