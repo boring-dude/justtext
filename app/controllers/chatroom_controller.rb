@@ -5,6 +5,7 @@ class ChatroomController < ApplicationController
   before_action :require_user
 
   def index
+    @mail = Mail.new
     @mails = Mail.all
   end
 end
