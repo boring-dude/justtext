@@ -10,7 +10,6 @@
         <%= form_for(:mail, html: {class: "ui reply form", role: "form"}, url: mail_path) do |f| %>
           <div class="ui fluid icon input">
             <%= f.text_field :body, placeholder: "Say something.."%>
-            
             <%= f.button '<i class="bordered inverted teal edit link icon"></i>'.html_safe %>
           </div>
         <% end %>
