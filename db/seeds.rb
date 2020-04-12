@@ -12,3 +12,8 @@ User.create(name: 'Aravindhan', password: '12345678')
 User.create(name: 'Aravindhan1', password: '1234')
 User.create(name: 'Aravindhan2', password: '12345')
 User.create(name: 'Aravindhan3', password: '123456')
+
+Mail.create(body: 'Aravindhan',  user: User.first)
+Mail.create(body: 'Aravindhan1', user: User.first)
+Mail.create(body: 'Aravindhan2', user: User.first)
+Mail.create(body: 'Aravindhan3', user: User.first)
