@@ -3,14 +3,7 @@
     <div class="ui fluid raised card chatbox">
       <div class="ui content">
         <div class="ui feed">
-          <% Mail.all.each do |mail| %>
-            <p>
-              <strong>
-                <em><%= mail.user.name + ': '%></em>
-              </strong>
-              <%= mail.body %>
-              </p>
-          <% end %>
+          <%= render @mails %>
         </div>
       </div>
       <div class="extra content">
