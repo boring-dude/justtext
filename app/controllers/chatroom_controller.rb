@@ -6,6 +6,6 @@ class ChatroomController < ApplicationController
 
   def index
     @mail = Mail.new
-    @mails = Mail.all
+    @mails = Mail.recent_messages
   end
 end
