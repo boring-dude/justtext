@@ -2,3 +2,14 @@
 .chatbox {
     height: 550px;
 }
+
+.compose_button {
+    background: none;
+    border: 0;
+    padding: 0;
+}
+
+#messages {
+    overflow: auto;
+    height: 500px;
+}

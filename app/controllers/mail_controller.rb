@@ -6,9 +6,9 @@ class MailController < ApplicationController
 
   def create
     mail = current_user.mails.build(whitelist_params)
-    if mail.save
-      ActionCable.server.broadcast 'chatroom_channel', mail: mail_render(mail)
-    end
+    return unless mail.save
+
+    ActionCable.server.broadcast 'chatroom_channel', mail: mail_render(mail)
   end
 
   private
