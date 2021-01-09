@@ -4,7 +4,7 @@
 
 ### 1. Install RVM
 ```$ \curl -sSL https://get.rvm.io | bash```  
-If you face any issues, please check [RVM](https://rvm.io/rvm/install)
+If you face any issues, please check [RVM Installation Page](https://rvm.io/rvm/install)
 
 ### 2. Install and use Ruby
 ```
@@ -30,7 +30,14 @@ $ cd justtext
 $ bundle install
 ```
 
-#### Congratulations! You've completed the local setup successfully
+#### Congratulations! You've completed the local setup successfully. 
+From now on, you can simply run the below to start your server.
+```
+$ cd justtext
+$ rvm use 2.7.0@gemset_name
+$ bundle install
+$ rails s
+```
 
 ## Things to do
 
